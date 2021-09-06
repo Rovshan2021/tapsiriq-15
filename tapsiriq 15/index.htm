@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0ad63258ae.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+<style>
+    .nav li{
+        display: inline;
+        padding: 20px;
+    }
+
+    .icon{
+        padding: 20px;
+        display: none;
+       
+    }
+/* 
+    .ham::before{
+        content: '\f0c9';
+        font-family: fontAwesome;
+        cursor: pointer;
+    }
+
+    .ham.active::after{
+        content: '\f00d';
+        font-family: fontAwesome;
+        cursor: pointer;
+    } */
+
+    .sideBar{
+        border: 1px solid black;
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        left: -400px;
+        animation-name: nav;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+    }
+
+
+    @keyframes nav {
+        from{
+            left: -400px;
+        } 
+        to{
+            left: 0px;
+        }
+    }
+
+
+    @media only screen and (max-width:768px){
+        #icon{
+        display:block;
+    }
+
+    .nav{
+        display: none;
+    }
+
+
+
+    }
+
+
+</style>
+</head>
+<body>
+    
+
+
+    <div>
+
+      <div class="icon">
+        <span class="ham "> </span>
+      </div>
+        
+        <ul class="nav">
+            <li>
+                <a href="#" class="test"> Home </a>
+            </li>
+            <li>
+                <a href="#"> Home </a>
+            </li>
+            <li>
+                <a href="#"> Home </a>
+            </li>
+            <li>
+                <a href="#"> Home </a>
+            </li>
+            <li>
+                <a href="#"> Home </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+ 
+    <div id="icon" class=" sideBar fas fa-bars" onclick="menu()" style="display: none;">
+        <ul class="menu2" >
+            <li>
+                <a href="#" > Home </a>
+            </li>
+            <li>
+                <a href="#"> Home </a>
+            </li>
+            <li>
+                <a href="#"> Home </a>
+            </li>
+            <li>
+                <a href="#"> Home </a>
+            </li>
+            <li>
+                <a href="#"> Home </a>
+            </li>
+
+        </ul>
+    </div>
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
